@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.ubaya.adv160419096uts.view.MainFragment"
+        android:label="Main Screen"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/actionMainDetailFragment"
+            app:destination="@id/mainDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubaya.adv160419096uts.view.ProfileFragment"
+        android:label="Profile Screen"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/actionLoginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/actionSettingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/actionEditProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemHistory"
+        android:name="com.ubaya.adv160419096uts.view.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/actionHistoryDetailFragment"
+            app:destination="@id/historyDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainDetailFragment"
+        android:name="com.ubaya.adv160419096uts.view.MainDetailFragment"
+        android:label="Detail Screen"
+        tools:layout="@layout/fragment_main_detail">
+        <argument
+            android:name="galangId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ubaya.adv160419096uts.view.LoginFragment"
+        android:label="Login Screen"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/actionProfileFragment"
+            app:destination="@id/itemProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.ubaya.adv160419096uts.view.SettingFragment"
+        android:label="Setting Screen"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/actionSettingToProfileFragment"
+            app:destination="@id/itemProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.ubaya.adv160419096uts.view.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/actionEditToProfileFragment"
+            app:destination="@id/itemProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyDetailFragment"
+        android:name="com.ubaya.adv160419096uts.view.HistoryDetailFragment"
+        android:label="fragment_history_detail"
+        tools:layout="@layout/fragment_history_detail" />
+</navigation>

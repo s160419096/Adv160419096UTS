@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HistoryDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="430dp"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/txtTitleDetailHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgDetail" />
+
+        <TextView
+            android:id="@+id/txtTotalHargaDetailHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleDetailHistory"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetailDonasiHistory" />
+
+        <TextView
+            android:id="@+id/txtTerkumpulHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/txtTotalHargaDetailHistory"
+            app:layout_constraintTop_toBottomOf="@+id/txtTotalHargaDetailHistory" />
+
+        <TextView
+            android:id="@+id/txtHariHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTotalHargaDetailHistory" />
+
+        <Button
+            android:id="@+id/btnDonasiLagi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Donasi Lagi"
+            app:layout_constraintEnd_toEndOf="@+id/txtHariHistory"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtTerkumpulHistory"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+
+        <ProgressBar
+            android:id="@+id/progressBarDetailHistory"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imgDetail"
+            app:layout_constraintEnd_toEndOf="@+id/imgDetail"
+            app:layout_constraintStart_toStartOf="@+id/imgDetail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtHariHistory"
+            app:layout_constraintStart_toStartOf="@+id/txtTerkumpulHistory"
+            app:layout_constraintTop_toBottomOf="@+id/txtTerkumpulHistory" />
+
+        <TextView
+            android:id="@+id/txtDetailDonasiHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleDetailHistory"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleDetailHistory" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

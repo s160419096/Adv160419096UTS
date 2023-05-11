@@ -36,6 +36,11 @@ class ProfileFragment : Fragment() {
         val btnSettings = view.findViewById<Button>(R.id.btnSettings)
         val btnEditProfile = view.findViewById<Button>(R.id.btnEditProfile)
 
+        btnEditProfile.setOnClickListener {
+            val action = ProfileFragmentDirections.actionEditProfileFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
+
         btnSettings.setOnClickListener {
             val action = ProfileFragmentDirections.actionSettingFragment()
             Navigation.findNavController(it).navigate(action)

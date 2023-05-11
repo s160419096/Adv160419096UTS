@@ -24,8 +24,8 @@ class EditProfileFragment : Fragment() {
 
         val btnBackEditProfile = view.findViewById<Button>(R.id.btnBackEditProfile)
         btnBackEditProfile.setOnClickListener {
-//            val action = EditProfileFragmentDirections.actionEditToProfileFragment()
-//            Navigation.findNavController(it).navigate(action)
+            val action = EditProfileFragmentDirections.actionEditToProfileFragment()
+            Navigation.findNavController(it).navigate(action)
         }
     }
 }

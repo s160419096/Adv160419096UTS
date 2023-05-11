@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.Navigation
 import com.ubaya.adv160419096uts.R
 
 class SettingFragment : Fragment() {
@@ -20,6 +22,10 @@ class SettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        val btnBackSetting = view.findViewById<Button>(R.id.btnBackSetting)
+        btnBackSetting.setOnClickListener{
+            val action = SettingFragmentDirections.actionSettingToProfileFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 }
